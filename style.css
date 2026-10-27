@@ -1,0 +1,222 @@
+
+/* *{
+    background-color: aqua;
+} */
+/* 
+.card{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+} */
+
+/* Import Outfit font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap'); */
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+/* Page layout */
+body{
+    min-height: 100vh;
+    background-color: #0d192b;
+    font-family: Outfit, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
+    color: #ffffff;
+} 
+
+
+.card {
+    width: 100%;
+    max-width: 350px;
+    padding: 24px;
+    background-color: #14253d;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* NFT image wrapper */
+.card__images {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+} 
+
+
+.nft-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Image hover overlay */
+.card__images-layer {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 255, 247, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Eye icon */
+.card__images-layer img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Show overlay on hover and keyboard focus */
+.card__images:hover .card__images-layer {
+    opacity: 1;
+} 
+
+/* NFT title */
+.card__title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card__title:hover {
+    color: #00fff7;
+} 
+
+/* Description */
+.card__description {
+    color: #8bacda;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 20px;
+} 
+
+/* Price and time section */
+.card__time {
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2f415b;
+    gap: 10px;
+}
+
+.card__time-left,
+.card__time-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Ethereum price */
+ .card__time-left {
+    color: #00fff7;
+    font-size: 15px;
+    font-weight: 600;
+} 
+
+/* Time remaining */
+.card__time-right {
+    color: #8bacda;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Creator section */
+.card__creator {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 16px;
+    color: #8bacda;
+    font-size: 14px;
+    font-weight: 300;
+} 
+
+/* Creator avatar */
+.creator-image {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+} 
+
+/* Creator name */
+.card__creator p {
+    line-height: 1.5;
+}
+
+.card__creator p:hover {
+    color: #00fff7;
+} 
+
+.card__creator span {
+    color: #ffffff;
+    font-weight: 700;
+}
+/* Attribution footer */
+.attribution {
+    margin-top: 20px;
+    text-align: center;
+    color: #8bacda;
+    font-size: 11px;
+    line-height: 1.8;
+} 
+
+.attribution a {
+    color: #00fff7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.attribution a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+} 
+
+/* Keyboard accessibility */
+.card__title:focus-visible,
+.attribution a:focus-visible {
+    outline: 2px solid #00fff7;
+    outline-offset: 4px;
+}
+
+/* Responsive layout */
+@media (max-width: 400px) {
+    .card {
+        max-width: 330px;
+        padding: 20px;
+    }
+
+    .card__title h1{
+        font-size: 20px;
+    }
+
+    #info {
+        font-size: 15px;
+    }
+}  
